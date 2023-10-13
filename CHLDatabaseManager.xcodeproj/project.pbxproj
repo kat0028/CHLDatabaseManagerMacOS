@@ -14,6 +14,9 @@
 		086FAAB72AD637E3006C76A7 /* CHLDatabaseManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086FAAB62AD637E3006C76A7 /* CHLDatabaseManagerTests.swift */; };
 		086FAAC12AD637E3006C76A7 /* CHLDatabaseManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086FAAC02AD637E3006C76A7 /* CHLDatabaseManagerUITests.swift */; };
 		086FAAC32AD637E3006C76A7 /* CHLDatabaseManagerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086FAAC22AD637E3006C76A7 /* CHLDatabaseManagerUITestsLaunchTests.swift */; };
+		086FAAD12AD63BEF006C76A7 /* csv_manager_wrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 086FAAD02AD63BEF006C76A7 /* csv_manager_wrapper.mm */; };
+		086FAAD52AD63C9E006C76A7 /* csv_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 086FAAD32AD63C9E006C76A7 /* csv_manager.cpp */; };
+		086FAAD72AD63D1A006C76A7 /* CSVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086FAAD62AD63D1A006C76A7 /* CSVManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,12 @@
 		086FAABC2AD637E3006C76A7 /* CHLDatabaseManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CHLDatabaseManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		086FAAC02AD637E3006C76A7 /* CHLDatabaseManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHLDatabaseManagerUITests.swift; sourceTree = "<group>"; };
 		086FAAC22AD637E3006C76A7 /* CHLDatabaseManagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CHLDatabaseManagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		086FAACF2AD63BEE006C76A7 /* CHLDatabaseManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CHLDatabaseManager-Bridging-Header.h"; sourceTree = "<group>"; };
+		086FAAD02AD63BEF006C76A7 /* csv_manager_wrapper.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = csv_manager_wrapper.mm; sourceTree = "<group>"; };
+		086FAAD22AD63C6A006C76A7 /* csv_manager_wrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = csv_manager_wrapper.h; sourceTree = "<group>"; };
+		086FAAD32AD63C9E006C76A7 /* csv_manager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = csv_manager.cpp; sourceTree = "<group>"; };
+		086FAAD42AD63C9E006C76A7 /* csv_manager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = csv_manager.hpp; sourceTree = "<group>"; };
+		086FAAD62AD63D1A006C76A7 /* CSVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +104,13 @@
 		086FAAA32AD637E2006C76A7 /* CHLDatabaseManager */ = {
 			isa = PBXGroup;
 			children = (
+				08A4CA2A2AD8C1FF004CB7EE /* csv_manager */,
 				086FAAA42AD637E2006C76A7 /* CHLDatabaseManagerApp.swift */,
 				086FAAA62AD637E2006C76A7 /* ContentView.swift */,
 				086FAAA82AD637E3006C76A7 /* Assets.xcassets */,
 				086FAAAD2AD637E3006C76A7 /* CHLDatabaseManager.entitlements */,
 				086FAAAA2AD637E3006C76A7 /* Preview Content */,
+				086FAACF2AD63BEE006C76A7 /* CHLDatabaseManager-Bridging-Header.h */,
 			);
 			path = CHLDatabaseManager;
 			sourceTree = "<group>";
@@ -127,6 +138,18 @@
 				086FAAC22AD637E3006C76A7 /* CHLDatabaseManagerUITestsLaunchTests.swift */,
 			);
 			path = CHLDatabaseManagerUITests;
+			sourceTree = "<group>";
+		};
+		08A4CA2A2AD8C1FF004CB7EE /* csv_manager */ = {
+			isa = PBXGroup;
+			children = (
+				086FAAD62AD63D1A006C76A7 /* CSVManager.swift */,
+				086FAAD22AD63C6A006C76A7 /* csv_manager_wrapper.h */,
+				086FAAD42AD63C9E006C76A7 /* csv_manager.hpp */,
+				086FAAD32AD63C9E006C76A7 /* csv_manager.cpp */,
+				086FAAD02AD63BEF006C76A7 /* csv_manager_wrapper.mm */,
+			);
+			path = csv_manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +220,7 @@
 				TargetAttributes = {
 					086FAAA02AD637E2006C76A7 = {
 						CreatedOnToolsVersion = 15.0;
+						LastSwiftMigration = 1500;
 					};
 					086FAAB12AD637E3006C76A7 = {
 						CreatedOnToolsVersion = 15.0;
@@ -261,6 +285,9 @@
 			files = (
 				086FAAA72AD637E2006C76A7 /* ContentView.swift in Sources */,
 				086FAAA52AD637E2006C76A7 /* CHLDatabaseManagerApp.swift in Sources */,
+				086FAAD72AD63D1A006C76A7 /* CSVManager.swift in Sources */,
+				086FAAD52AD63C9E006C76A7 /* csv_manager.cpp in Sources */,
+				086FAAD12AD63BEF006C76A7 /* csv_manager_wrapper.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +447,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CHLDatabaseManager/CHLDatabaseManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -438,6 +466,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = USJF.CHLDatabaseManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CHLDatabaseManager/CHLDatabaseManager-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -447,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CHLDatabaseManager/CHLDatabaseManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -465,6 +496,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = USJF.CHLDatabaseManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CHLDatabaseManager/CHLDatabaseManager-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
